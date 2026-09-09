@@ -1,0 +1,1 @@
+import{t as e}from"./nav-C520bPj5.js";e(`bash`);
