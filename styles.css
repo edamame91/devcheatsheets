@@ -2,18 +2,18 @@
   --bg: #0d0d0d;
   --surface: #141414;
   --border: #222;
-  --accent-bash: #3bf85b;
-  --accent-git: #f74646;
-  --accent-powershell: #60a5fa;
-  --accent2-bash: #4ade80;
-  --accent2-git: #fb783c;
-  --accent2-powershell: #93c5fd;
+  --accent-bash: #ff3974;
+  --accent-git: #ffac4d;
+  --accent-powershell: #94efff;
+  --accent2-bash: #fdfb69;
+  --accent2-git: #ffd000;
+  --accent2-powershell: #c1ebff;
   --text: #e5e5e5;
   --muted: #666;
   --code-bg: #1a1a1a;
-  --green: #4ade80;
+  --green: #a5de4a;
   --blue: #60a5fa;
-  --purple: #a78bfa;
+  --pink: #ff93ce;
   --red: #f87171;
   --yellow: #fbbf24;
 }
@@ -285,7 +285,7 @@ body.powershell-page .cmd:hover {
 }
 
 .cmd code .arg {
-  color: var(--purple);
+  color: var(--pink);
 }
 
 .cmd code .keyword {

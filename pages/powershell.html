@@ -253,6 +253,246 @@
           </div>
         </div>
 
+        <div class="card">
+          <div class="card-header">
+            <div class="dot"></div>
+            <h2>Networking & Diagnostics</h2>
+          </div>
+          <div class="commands">
+            <div class="cmd">
+              <code>Get-NetIPConfiguration</code>
+              <span class="desc"
+                >Show IP, gateway and DNS per adapter (ipconfig
+                equivalent)</span
+              >
+            </div>
+            <div class="cmd">
+              <code
+                >Test-NetConnection <span class="arg">server01</span>
+                <span class="flag">-Port</span> 443</code
+              >
+              <span class="desc">Check host reachability on a port</span>
+            </div>
+            <div class="cmd">
+              <code>Clear-DnsClientCache</code>
+              <span class="desc"
+                >Flush local DNS cache (ipconfig /flushdns
+                equivalent)</span
+              >
+            </div>
+            <div class="cmd">
+              <code>Resolve-DnsName <span class="arg">example.com</span></code>
+              <span class="desc">Look up DNS records for a host</span>
+            </div>
+            <div class="cmd">
+              <code>Get-NetAdapter</code>
+              <span class="desc">List network adapters and status</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Restart-NetAdapter <span class="flag">-Name</span>
+                <span class="arg">"Ethernet"</span></code
+              >
+              <span class="desc">Disable and re-enable a NIC</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="dot"></div>
+            <h2>Users & Groups</h2>
+          </div>
+          <div class="commands">
+            <div class="cmd">
+              <code>Get-LocalUser</code>
+              <span class="desc">List local user accounts</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Get-LocalGroupMember <span class="flag">-Group</span>
+                <span class="arg">"Administrators"</span></code
+              >
+              <span class="desc">Show members of a local group</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Add-LocalGroupMember <span class="flag">-Group</span>
+                <span class="arg">"Administrators"</span>
+                <span class="flag">-Member</span>
+                <span class="arg">"jsmith"</span></code
+              >
+              <span class="desc">Add a user to a local group</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Set-LocalUser <span class="flag">-Name</span>
+                <span class="arg">"jsmith"</span>
+                <span class="flag">-PasswordNeverExpires</span> $true</code
+              >
+              <span class="desc">Update a local user's account settings</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Disable-LocalUser <span class="flag">-Name</span>
+                <span class="arg">"jsmith"</span></code
+              >
+              <span class="desc"
+                >Disable an account
+                <span class="tag tag-danger">destructive</span></span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="dot"></div>
+            <h2>Event Logs</h2>
+          </div>
+          <div class="commands">
+            <div class="cmd">
+              <code
+                >Get-WinEvent <span class="flag">-LogName</span>
+                <span class="arg">System</span>
+                <span class="flag">-MaxEvents</span> 20</code
+              >
+              <span class="desc">Show most recent System log entries</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Get-WinEvent <span class="flag">-FilterHashtable</span>
+                <span class="arg"
+                  >@{LogName='System'; Level=2}</span
+                ></code
+              >
+              <span class="desc">Filter log entries by error level</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Get-EventLog <span class="flag">-LogName</span>
+                <span class="arg">Application</span>
+                <span class="flag">-EntryType</span> Error
+                <span class="flag">-Newest</span> 10</code
+              >
+              <span class="desc">Show recent application errors</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Clear-EventLog <span class="flag">-LogName</span>
+                <span class="arg">Application</span></code
+              >
+              <span class="desc"
+                >Clear a log
+                <span class="tag tag-danger">destructive</span></span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="dot"></div>
+            <h2>Disk & Storage</h2>
+          </div>
+          <div class="commands">
+            <div class="cmd">
+              <code>Get-Volume</code>
+              <span class="desc">Show drives with free and used space</span>
+            </div>
+            <div class="cmd">
+              <code>Get-PSDrive <span class="flag">-PSProvider</span> FileSystem</code>
+              <span class="desc">List mapped drives and mount points</span>
+            </div>
+            <div class="cmd">
+              <code>Get-Disk</code>
+              <span class="desc">Show physical disks and health status</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Get-ChildItem <span class="flag">-Recurse</span> |
+                Sort-Object Length <span class="flag">-Descending</span> |
+                Select-Object <span class="flag">-First</span> 10</code
+              >
+              <span class="desc">Find the largest files in a folder</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="dot"></div>
+            <h2>Remote Management</h2>
+          </div>
+          <div class="commands">
+            <div class="cmd">
+              <code
+                >Test-WSMan <span class="flag">-ComputerName</span>
+                <span class="arg">PC01</span></code
+              >
+              <span class="desc">Check a machine accepts remote PS commands</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Enter-PSSession <span class="flag">-ComputerName</span>
+                <span class="arg">PC01</span></code
+              >
+              <span class="desc">Open an interactive remote session</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Invoke-Command <span class="flag">-ComputerName</span>
+                <span class="arg">PC01</span>
+                <span class="flag">-ScriptBlock</span>
+                <span class="arg">{ Get-Process }</span></code
+              >
+              <span class="desc">Run a command on a remote machine</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Restart-Computer <span class="flag">-ComputerName</span>
+                <span class="arg">PC01</span>
+                <span class="flag">-Force</span></code
+              >
+              <span class="desc"
+                >Restart a remote machine
+                <span class="tag tag-danger">destructive</span></span
+              >
+            </div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <div class="dot"></div>
+            <h2>Printers & Updates</h2>
+          </div>
+          <div class="commands">
+            <div class="cmd">
+              <code>Get-Printer</code>
+              <span class="desc">List installed printers</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Add-Printer <span class="flag">-ConnectionName</span>
+                <span class="arg">"\\\\server\\printer1"</span></code
+              >
+              <span class="desc">Connect to a shared network printer</span>
+            </div>
+            <div class="cmd">
+              <code
+                >Remove-Printer <span class="flag">-Name</span>
+                <span class="arg">"printer1"</span></code
+              >
+              <span class="desc">Remove a printer</span>
+            </div>
+            <div class="cmd">
+              <code>Get-HotFix</code>
+              <span class="desc">List installed Windows updates</span>
+            </div>
+          </div>
+        </div>
+
         <div class="card wide">
           <div class="card-header">
             <div class="dot"></div>
