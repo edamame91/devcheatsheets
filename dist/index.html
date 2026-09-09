@@ -3,22 +3,21 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/x-icon" href="./assets/favicon-DfaJhxJz.svg" />
     <title>Git Cheat Sheet</title>
     <link
       href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Syne:wght@400;700;800&display=swap"
       rel="stylesheet"
     />
-    <script type="module" crossorigin src="./assets/main-BJzj8rdv.js"></script>
-    <link rel="modulepreload" crossorigin href="./assets/nav-C520bPj5.js">
-    <link rel="stylesheet" crossorigin href="./assets/nav-xrEWPGcH.css">
+    <script type="module" crossorigin src="./assets/main-Cq_dmCJy.js"></script>
+    <link rel="modulepreload" crossorigin href="./assets/nav-DRwslH96.js">
+    <link rel="stylesheet" crossorigin href="./assets/nav-CmfSMkiC.css">
   </head>
   <body class="git-page">
     <nav class="navbar"></nav>
 
     <main>
       <header>
-        <h1><span class="highlight">Git</span></h1>
+        <h1>Git <span class="highlight">Cheat Sheet</span></h1>
       </header>
 
       <div class="view-tabs">
@@ -42,42 +41,25 @@
                   >git config <span class="flag">--global</span> user.name
                   <span class="arg">"Name"</span></code
                 >
-                <span class="desc"
-                  >Set your name globally (used on all commits)</span
-                >
+                <span class="desc">Set your name globally</span>
               </div>
               <div class="cmd">
                 <code
                   >git config <span class="flag">--global</span> user.email
                   <span class="arg">"email"</span></code
                 >
-                <span class="desc"
-                  >Set your email globally (appears in commit metadata)</span
-                >
+                <span class="desc">Set your email globally</span>
               </div>
               <div class="cmd">
                 <code
                   >git config <span class="flag">--global</span> core.editor
                   <span class="arg">vim</span></code
                 >
-                <span class="desc"
-                  >Set default editor for commit messages and rebasing</span
-                >
+                <span class="desc">Set default editor</span>
               </div>
               <div class="cmd">
                 <code>git config <span class="flag">--list</span></code>
-                <span class="desc"
-                  >Show all config values (global and local)</span
-                >
-              </div>
-              <div class="cmd">
-                <code
-                  >git config <span class="flag">--local</span> user.name
-                  <span class="arg">"Local Name"</span></code
-                >
-                <span class="desc"
-                  >Set name for current repo only (overrides global)</span
-                >
+                <span class="desc">Show all config values</span>
               </div>
             </div>
           </div>
@@ -133,20 +115,12 @@
               </div>
               <div class="cmd">
                 <code>git add <span class="flag">.</span></code>
-                <span class="desc">Stage all changes in current directory</span>
+                <span class="desc">Stage all changes</span>
               </div>
               <div class="cmd">
-                <code>git add <span class="flag">-A</span></code>
+                <code>git add <span class="flag">-p</span></code>
                 <span class="desc"
-                  >Stage all changes everywhere (including deletions)</span
-                >
-              </div>
-              <div class="cmd">
-                <span class="desc"
-                  >Interactively stage chunks — review each hunk before staging
-                  <span class="tag tag-tip"
-                    >very useful for careful commits</span
-                  ></span
+                  >Interactively stage chunks — very useful</span
                 >
               </div>
               <div class="cmd">
@@ -180,7 +154,7 @@
                   >git commit <span class="flag">-m</span>
                   <span class="arg">"message"</span></code
                 >
-                <span class="desc">Commit staged changes with a message</span>
+                <span class="desc">Commit with a message</span>
               </div>
               <div class="cmd">
                 <code
@@ -188,15 +162,13 @@
                   <span class="arg">"message"</span></code
                 >
                 <span class="desc"
-                  >Stage all tracked file changes and commit in one step
-                  (modified files only)</span
+                  >Stage tracked files and commit in one step</span
                 >
               </div>
               <div class="cmd">
                 <code>git commit <span class="flag">--amend</span></code>
                 <span class="desc"
-                  >Edit the last commit message or add staged changes without
-                  creating new commit
+                  >Edit the last commit message or add staged changes
                   <span class="tag tag-danger">rewrites history</span></span
                 >
               </div>
@@ -205,8 +177,7 @@
                   >git commit <span class="flag">--amend --no-edit</span></code
                 >
                 <span class="desc"
-                  >Add staged changes to last commit, keep original
-                  message</span
+                  >Add staged changes to last commit, keep message</span
                 >
               </div>
             </div>
@@ -221,57 +192,29 @@
             <div class="commands">
               <div class="cmd">
                 <code>git branch</code>
-                <span class="desc"
-                  >List local branches — current marked with *</span
-                >
-              </div>
-              <div class="cmd">
-                <code>git branch <span class="flag">-a</span></code>
-                <span class="desc">List all branches (local and remote)</span>
+                <span class="desc">List local branches</span>
               </div>
               <div class="cmd">
                 <code>git branch <span class="arg">&lt;name&gt;</span></code>
-                <span class="desc">Create a new branch at current commit</span>
-              </div>
-              <div class="cmd">
-                <code
-                  >git branch <span class="arg">&lt;name&gt;</span>
-                  <span class="arg">&lt;commit&gt;</span></code
-                >
-                <span class="desc">Create branch from specific commit</span>
+                <span class="desc">Create a new branch</span>
               </div>
               <div class="cmd">
                 <code>git switch <span class="arg">&lt;name&gt;</span></code>
-                <span class="desc"
-                  >Switch to a branch — working directory updates</span
-                >
+                <span class="desc">Switch to a branch</span>
               </div>
               <div class="cmd">
                 <code
                   >git switch <span class="flag">-c</span>
                   <span class="arg">&lt;name&gt;</span></code
                 >
-                <span class="desc"
-                  >Create and switch in one step (modern replacement for
-                  checkout -b)</span
-                >
-              </div>
-              <div class="cmd">
-                <code
-                  >git branch <span class="flag">-m</span>
-                  <span class="arg">&lt;old&gt;</span>
-                  <span class="arg">&lt;new&gt;</span></code
-                >
-                <span class="desc">Rename a branch</span>
+                <span class="desc">Create and switch in one step </span>
               </div>
               <div class="cmd">
                 <code
                   >git branch <span class="flag">-d</span>
                   <span class="arg">&lt;name&gt;</span></code
                 >
-                <span class="desc"
-                  >Delete a merged branch (safe — won't delete unmerged)</span
-                >
+                <span class="desc">Delete a merged branch</span>
               </div>
               <div class="cmd">
                 <code
@@ -280,14 +223,8 @@
                 >
                 <span class="desc"
                   >Force delete a branch
-                  <span class="tag tag-danger"
-                    >destructive — discards work</span
-                  ></span
+                  <span class="tag tag-danger">destructive</span></span
                 >
-              </div>
-              <div class="cmd">
-                <code>git branch <span class="flag">-v</span></code>
-                <span class="desc">Show branches with last commit info</span>
               </div>
             </div>
           </div>
@@ -301,35 +238,20 @@
             <div class="commands">
               <div class="cmd">
                 <code>git merge <span class="arg">&lt;branch&gt;</span></code>
-                <span class="desc"
-                  >Merge branch into current — creates merge commit if branches
-                  diverged</span
-                >
+                <span class="desc">Merge branch into current</span>
               </div>
               <div class="cmd">
                 <code
                   >git merge <span class="flag">--no-ff</span>
                   <span class="arg">&lt;branch&gt;</span></code
                 >
-                <span class="desc"
-                  >Merge and always create a merge commit (for history)</span
-                >
-              </div>
-              <div class="cmd">
-                <code
-                  >git merge <span class="flag">--squash</span>
-                  <span class="arg">&lt;branch&gt;</span></code
-                >
-                <span class="desc"
-                  >Combine all commits from branch into one new commit</span
-                >
+                <span class="desc">Merge and always create a merge commit</span>
               </div>
               <div class="cmd">
                 <code>git rebase <span class="arg">&lt;branch&gt;</span></code>
                 <span class="desc"
-                  >Replay current commits on top of another branch
-                  <span class="tag tag-danger">rewrites history</span> — use
-                  only on unpushed commits</span
+                  >Rebase current branch onto another
+                  <span class="tag tag-danger">rewrites history</span></span
                 >
               </div>
               <div class="cmd">
@@ -340,28 +262,12 @@
                   ></code
                 >
                 <span class="desc"
-                  >Interactive rebase — squash, reorder, edit, or drop
-                  commits</span
-                >
-              </div>
-              <div class="cmd">
-                <code>git rebase <span class="flag">--continue</span></code>
-                <span class="desc"
-                  >Resume after resolving rebase conflicts</span
-                >
+                  >Interactive rebase — squash, reorder, edit last n commits
+                </span>
               </div>
               <div class="cmd">
                 <code>git rebase <span class="flag">--abort</span></code>
-                <span class="desc"
-                  >Cancel an in-progress rebase and return to original
-                  state</span
-                >
-              </div>
-              <div class="cmd">
-                <code>git merge <span class="flag">--abort</span></code>
-                <span class="desc"
-                  >Cancel an in-progress merge (useful during conflicts)</span
-                >
+                <span class="desc">Cancel an in-progress rebase</span>
               </div>
             </div>
           </div>
@@ -374,59 +280,31 @@
             </div>
             <div class="commands">
               <div class="cmd">
-                <code>git remote</code>
-                <span class="desc">List remote names (usually 'origin')</span>
-              </div>
-              <div class="cmd">
                 <code>git remote <span class="flag">-v</span></code>
-                <span class="desc">List remotes with fetch/push URLs</span>
-              </div>
-              <div class="cmd">
-                <code>git remote show <span class="arg">origin</span></code>
-                <span class="desc">Detailed info about a remote</span>
+                <span class="desc">List remotes with URLs</span>
               </div>
               <div class="cmd">
                 <code
                   >git remote add
-                  <span class="arg">upstream &lt;url&gt;</span></code
+                  <span class="arg">origin &lt;url&gt;</span></code
                 >
-                <span class="desc"
-                  >Add a new remote (common for forks: upstream = original
-                  repo)</span
-                >
+                <span class="desc">Add a remote</span>
               </div>
               <div class="cmd">
                 <code>git fetch</code>
                 <span class="desc"
-                  >Download all remote changes without modifying working
-                  directory</span
-                >
-              </div>
-              <div class="cmd">
-                <code>git fetch <span class="arg">&lt;remote&gt;</span></code>
-                <span class="desc"
-                  >Fetch from specific remote (e.g., upstream, origin)</span
+                  >Download remote changes without merging</span
                 >
               </div>
               <div class="cmd">
                 <code>git pull</code>
-                <span class="desc"
-                  >Fetch from upstream and merge into current branch</span
-                >
+                <span class="desc">Fetch and merge remote changes</span>
               </div>
               <div class="cmd">
                 <code>git pull <span class="flag">--rebase</span></code>
                 <span class="desc"
-                  >Fetch and rebase instead of merge — cleaner linear history
-                  <span class="tag tag-tip"
-                    >recommended for feature branches</span
-                  ></span
-                >
-              </div>
-              <div class="cmd">
-                <code>git push</code>
-                <span class="desc"
-                  >Push current branch to its upstream remote</span
+                  >Fetch and rebase instead of merge
+                  <span class="tag tag-tip">cleaner history</span></span
                 >
               </div>
               <div class="cmd">
@@ -434,35 +312,15 @@
                   >git push <span class="flag">-u</span> origin
                   <span class="arg">&lt;branch&gt;</span></code
                 >
-                <span class="desc"
-                  >Push and set upstream tracking (do this first time per
-                  branch)</span
-                >
-              </div>
-              <div class="cmd">
-                <code
-                  >git push <span class="arg">origin</span>
-                  <span class="arg">feature-branch</span></code
-                >
-                <span class="desc"
-                  >Push specific branch to specific remote</span
-                >
+                <span class="desc">Push and set upstream tracking</span>
               </div>
               <div class="cmd">
                 <code
                   >git push <span class="flag">--force-with-lease</span></code
                 >
                 <span class="desc"
-                  >Safer force push — fails if remote has newer commits
-                  <span class="tag tag-tip">always use over --force</span></span
+                  >Safer force push — fails if remote has new commits</span
                 >
-              </div>
-              <div class="cmd">
-                <code
-                  >git push origin <span class="flag">--delete</span>
-                  <span class="arg">&lt;branch&gt;</span></code
-                >
-                <span class="desc">Delete a remote branch</span>
               </div>
             </div>
           </div>
@@ -475,21 +333,11 @@
             </div>
             <div class="commands">
               <div class="cmd">
-                <code>git log</code>
-                <span class="desc">Show commit history (newest first)</span>
-              </div>
-              <div class="cmd">
                 <code
                   >git log
                   <span class="flag">--oneline --graph --all</span></code
                 >
-                <span class="desc"
-                  >Compact visual branch history with all branches</span
-                >
-              </div>
-              <div class="cmd">
-                <code>git log <span class="arg">&lt;branch&gt;</span></code>
-                <span class="desc">Show history of specific branch</span>
+                <span class="desc">Compact visual branch history </span>
               </div>
               <div class="cmd">
                 <code
@@ -497,28 +345,16 @@
                   <span class="arg">&lt;file&gt;</span></code
                 >
                 <span class="desc"
-                  >Show commit history with full diffs for a file</span
+                  >Show commit history with diffs for a file</span
                 >
-              </div>
-              <div class="cmd">
-                <code
-                  >git log <span class="flag">--since</span>=<span class="arg"
-                    >"2 weeks ago"</span
-                  ></code
-                >
-                <span class="desc">Show commits since a specific time</span>
               </div>
               <div class="cmd">
                 <code>git diff</code>
-                <span class="desc"
-                  >Show unstaged changes between working tree and index</span
-                >
+                <span class="desc">Show unstaged changes</span>
               </div>
               <div class="cmd">
                 <code>git diff <span class="flag">--staged</span></code>
-                <span class="desc"
-                  >Show staged changes (what's ready to commit)</span
-                >
+                <span class="desc">Show staged changes</span>
               </div>
               <div class="cmd">
                 <code
@@ -591,56 +427,26 @@
               </div>
               <div class="cmd">
                 <code>git reset <span class="flag">--soft</span> HEAD~1</code>
-                <span class="desc"
-                  >Undo last commit, keep changes staged — good for
-                  amending</span
-                >
+                <span class="desc">Undo last commit, keep changes staged</span>
               </div>
               <div class="cmd">
                 <code>git reset <span class="flag">--mixed</span> HEAD~1</code>
                 <span class="desc"
-                  >Undo last commit, keep changes unstaged (default)
-                  <span class="tag tag-tip">most common</span></span
+                  >Undo last commit, keep changes unstaged</span
                 >
               </div>
               <div class="cmd">
                 <code>git reset <span class="flag">--hard</span> HEAD~1</code>
                 <span class="desc"
                   >Undo last commit, discard all changes
-                  <span class="tag tag-danger"
-                    >destructive — but reflog saves you</span
-                  ></span
+                  <span class="tag tag-danger">destructive</span></span
                 >
               </div>
               <div class="cmd">
                 <code>git reflog</code>
                 <span class="desc"
-                  >History of HEAD changes — recover lost commits from
-                  resets/rebases
-                  <span class="tag tag-tip">lifesaver for accidents</span></span
-                >
-              </div>
-              <div class="cmd">
-                <code
-                  >git reset <span class="flag">--hard</span>
-                  <span class="arg">&lt;hash&gt;</span></code
-                >
-                <span class="desc"
-                  >Reset to a specific commit (dangerous on shared
-                  branches)</span
-                >
-              </div>
-              <div class="cmd">
-                <code>git clean <span class="flag">-fd</span></code>
-                <span class="desc"
-                  >Delete untracked files and directories
-                  <span class="tag tag-danger">destructive</span></span
-                >
-              </div>
-              <div class="cmd">
-                <code>git clean <span class="flag">-n</span></code>
-                <span class="desc"
-                  >Preview what would be deleted (always check first!)</span
+                  >History of HEAD — recover lost commits
+                  <span class="tag tag-tip">lifesaver</span></span
                 >
               </div>
             </div>
@@ -800,130 +606,6 @@
               <div class="note note-warning">
                 <strong>Warning:</strong> Only use <code>--hard</code> if you're
                 sure. It discards uncommitted changes.
-              </div>
-            </div>
-          </div>
-          <div class="example-card">
-            <div class="example-header">
-              <h3>Complete Feature Branch Workflow</h3>
-              <span class="difficulty medium">Medium</span>
-            </div>
-            <div class="example-content">
-              <div class="scenario">
-                <strong>Scenario:</strong> Full workflow from starting a feature
-                to merging it back to main.
-              </div>
-              <div class="solution">
-                <div class="step">
-                  <div class="step-title">
-                    Step 1: Create feature branch from main
-                  </div>
-                  <code>git switch main</code>
-                  <code>git pull origin main</code>
-                  <code>git switch -c feature/user-auth</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 2: Make changes and commit</div>
-                  <code>git add .</code>
-                  <code>git commit -m "Add login form"</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 3: Keep pushing regularly</div>
-                  <code>git push -u origin feature/user-auth</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 4: Before PR, update from main
-                  </div>
-                  <code>git fetch origin</code>
-                  <code>git rebase origin/main</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 5: If someone else made changes
-                  </div>
-                  <code
-                    >git push --force-with-lease origin feature/user-auth</code
-                  >
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 6: After PR is approved and merged
-                  </div>
-                  <code>git switch main</code>
-                  <code>git pull origin main</code>
-                  <code>git branch -d feature/user-auth</code>
-                </div>
-              </div>
-              <div class="note note-tip">
-                <strong>Branch naming:</strong> Use descriptive names like
-                <code>feature/auth</code>, <code>bugfix/login-error</code>,
-                <code>docs/readme</code>
-              </div>
-            </div>
-          </div>
-
-          <div class="example-card">
-            <div class="example-header">
-              <h3>Update Feature Branch Before Pull Request</h3>
-              <span class="difficulty medium">Medium</span>
-            </div>
-            <div class="example-content">
-              <div class="scenario">
-                <strong>Scenario:</strong> Your feature branch is behind
-                <code>main</code>/<code>develop</code>. You want to update it
-                before creating a pull request to avoid merge conflicts.
-              </div>
-              <div class="solution">
-                <div class="step">
-                  <div class="step-title">
-                    Step 1: Ensure you're on your feature branch
-                  </div>
-                  <code>git switch feature-branch</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 2: Fetch latest from remote</div>
-                  <code>git fetch origin</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 3: Rebase option (cleaner history)
-                  </div>
-                  <code>git rebase origin/main</code>
-                  <div class="step-desc">
-                    Replays your commits on top of latest main
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    OR Merge option (preserves history)
-                  </div>
-                  <code>git merge origin/main</code>
-                  <div class="step-desc">
-                    Creates a merge commit if branches have diverged
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 4: If conflicts during rebase
-                  </div>
-                  <code>git rebase --abort</code>
-                  <div class="step-desc">
-                    Cancel and try merge instead if needed
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 5: Force push if rebased</div>
-                  <code>git push --force-with-lease origin feature-branch</code>
-                  <div class="step-desc">
-                    Only if you already pushed this branch
-                  </div>
-                </div>
-              </div>
-              <div class="note note-tip">
-                <strong>Rebase vs Merge:</strong> Rebase keeps a linear history
-                (preferred for PRs), while merge preserves the full history.
-                Check your team's preference.
               </div>
             </div>
           </div>
@@ -1299,378 +981,6 @@ squash ghi789 Another fix</pre
                     &lt;hash3&gt;</code
                   >
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="example-card">
-            <div class="example-header">
-              <h3>Handle Rebase Conflicts</h3>
-              <span class="difficulty medium">Medium</span>
-            </div>
-            <div class="example-content">
-              <div class="scenario">
-                <strong>Scenario:</strong> During a rebase, you have conflicts
-                that need resolving.
-              </div>
-              <div class="solution">
-                <div class="step">
-                  <div class="step-title">Step 1: Check status</div>
-                  <code>git status</code>
-                  <div class="step-desc">See which files have conflicts</div>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 2: Edit conflicted files</div>
-                  <div class="step-desc">
-                    Look for &lt;&lt;&lt;&lt;&lt;&lt;&lt; marks and resolve
-                    manually
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 3: Mark as resolved</div>
-                  <code>git add &lt;resolved-files&gt;</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 4: Continue the rebase</div>
-                  <code>git rebase --continue</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 5: If multiple conflicts per file
-                  </div>
-                  <div class="step-desc">
-                    Repeat steps 2-4 for each conflict batch
-                  </div>
-                </div>
-              </div>
-              <div class="note note-warning">
-                <strong>Abort if stuck:</strong> <code>git rebase --abort</code>
-                to cancel and start over
-              </div>
-            </div>
-          </div>
-
-          <div class="example-card">
-            <div class="example-header">
-              <h3>Keep Your Main Branch Clean</h3>
-              <span class="difficulty easy">Easy</span>
-            </div>
-            <div class="example-content">
-              <div class="scenario">
-                <strong>Scenario:</strong> You accidentally made commits on
-                <code>main</code> but want them on a feature branch instead.
-              </div>
-              <div class="solution">
-                <div class="step">
-                  <div class="step-title">
-                    Step 1: Create feature branch with your commits
-                  </div>
-                  <code>git branch feature/my-changes</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 2: See how many commits to undo
-                  </div>
-                  <code>git log --oneline -5</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 3: Reset main to origin</div>
-                  <code>git reset --hard origin/main</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 4: Switch to your feature branch
-                  </div>
-                  <code>git switch feature/my-changes</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 5: Push new feature branch</div>
-                  <code>git push -u origin feature/my-changes</code>
-                </div>
-              </div>
-              <div class="note note-tip">
-                <strong>Key benefit:</strong> Keep main in sync with origin/main
-                so CI/CD and deploys stay reliable
-              </div>
-            </div>
-          </div>
-
-          <div class="example-card">
-            <div class="example-header">
-              <h3>Interactive Rebase: Squash, Reorder, Edit Commits</h3>
-              <span class="difficulty hard">Hard</span>
-            </div>
-            <div class="example-content">
-              <div class="scenario">
-                <strong>Scenario:</strong> You have messy commits with typo
-                fixes and incremental changes. You want to clean them up into
-                logical commits before merging.
-              </div>
-              <div class="solution">
-                <div class="step">
-                  <div class="step-title">Step 1: Start interactive rebase</div>
-                  <code>git rebase -i HEAD~5</code>
-                  <div class="step-desc">Edit last 5 commits</div>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 2: In your editor, you'll see:
-                  </div>
-                  <pre>
-pick abc123 Add user model
-pick def456 Fix typo in model
-pick ghi789 Add validation
-pick jkl012 Fix validation bug
-pick mno345 Update docs</pre
-                  >
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 3: Modify commands as needed:
-                  </div>
-                  <pre>
-pick abc123 Add user model
-squash def456 Fix typo in model
-pick ghi789 Add validation
-squash jkl012 Fix validation bug
-reword mno345 Update docs</pre
-                  >
-                  <div class="step-desc">
-                    Commands: pick (keep), squash (merge with previous), reword
-                    (edit message), drop (remove)
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 4: Save and edit combined messages
-                  </div>
-                  <div class="step-desc">
-                    For squashed commits, edit the final commit message
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 5: Force push if already pushed
-                  </div>
-                  <code>git push --force-with-lease</code>
-                </div>
-              </div>
-              <div class="note note-warning">
-                <strong>Team rule:</strong> Never rebase commits that teammates
-                are actively working on
-              </div>
-            </div>
-          </div>
-
-          <div class="example-card">
-            <div class="example-header">
-              <h3>Find and Debug: Blame, Log Search, and Bisect</h3>
-              <span class="difficulty medium">Medium</span>
-            </div>
-            <div class="example-content">
-              <div class="scenario">
-                <strong>Scenario:</strong> A bug appeared and you need to find
-                which commit introduced it.
-              </div>
-              <div class="solution">
-                <div class="step">
-                  <div class="step-title">
-                    Step 1: See who changed a specific line
-                  </div>
-                  <code>git blame src/auth.js</code>
-                  <div class="step-desc">
-                    Shows commit hash and author for each line
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 2: Find commits by message</div>
-                  <code>git log --all --grep="auth fix"</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 3: Find commits that changed specific string
-                  </div>
-                  <code>git log -S "validatePassword" -p</code>
-                  <div class="step-desc">
-                    Shows commits where this string was added or removed
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 4: Binary search for the bad commit
-                  </div>
-                  <code>git bisect start</code>
-                  <code>git bisect bad</code>
-                  <code>git bisect good v1.0</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 5: Test current commit and mark it
-                  </div>
-                  <code>git bisect good</code> or <code>git bisect bad</code>
-                  <div class="step-desc">
-                    Git narrows down the commit automatically
-                  </div>
-                </div>
-              </div>
-              <div class="note note-tip">
-                <strong>View specific commit:</strong>
-                <code>git show &lt;commit-hash&gt;</code> to see full changes
-              </div>
-            </div>
-          </div>
-
-          <div class="example-card">
-            <div class="example-header">
-              <h3>Manage Multiple Remotes and Branches</h3>
-              <span class="difficulty medium">Medium</span>
-            </div>
-            <div class="example-content">
-              <div class="scenario">
-                <strong>Scenario:</strong> You work with forks, multiple repos,
-                or need to pull from different sources.
-              </div>
-              <div class="solution">
-                <div class="step">
-                  <div class="step-title">Step 1: List all remotes</div>
-                  <code>git remote -v</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 2: Add upstream, fork, or team remote
-                  </div>
-                  <code>git remote add upstream &lt;original-repo&gt;</code>
-                  <code>git remote add team-repo &lt;team-url&gt;</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 3: Fetch from all remotes</div>
-                  <code>git fetch --all</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 4: Check out branch from specific remote
-                  </div>
-                  <code>git switch --track upstream/feature-x</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 5: View all branches everywhere
-                  </div>
-                  <code>git branch -a</code>
-                  <div class="step-desc">Shows local and remote branches</div>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 6: Pull from upstream, push to origin
-                  </div>
-                  <code>git pull upstream develop</code>
-                  <code>git push origin develop</code>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="example-card">
-            <div class="example-header">
-              <h3>Undo Multiple Commits Safely</h3>
-              <span class="difficulty hard">Hard</span>
-            </div>
-            <div class="example-content">
-              <div class="scenario">
-                <strong>Scenario:</strong> The last 3 commits are wrong but you
-                want to keep them to investigate, or revert them safely on a
-                shared branch.
-              </div>
-              <div class="solution">
-                <div class="step">
-                  <div class="step-title">
-                    Option 1: Soft reset (keep changes)
-                  </div>
-                  <code>git reset --soft HEAD~3</code>
-                  <div class="step-desc">
-                    Undo commits but keep changes staged for re-committing
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Option 2: Revert for shared branches
-                  </div>
-                  <code>git revert HEAD~2..HEAD</code>
-                  <div class="step-desc">
-                    Creates new commits that undo the old ones (safe for
-                    published commits)
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step-title">Option 3: Interactive rebase</div>
-                  <code>git rebase -i HEAD~3</code>
-                  <div class="step-desc">
-                    Mark commits to 'drop' and they're removed
-                  </div>
-                </div>
-                <div class="step">
-                  <div class="step-title">Save to a branch first if unsure</div>
-                  <code>git branch backup-branch</code>
-                  <div class="step-desc">Then proceed with your undo</div>
-                </div>
-              </div>
-              <div class="note note-tip">
-                <strong>When in doubt:</strong> Use reflog to check
-                <code>git reflog</code> — you can always recover!
-              </div>
-            </div>
-          </div>
-
-          <div class="example-card">
-            <div class="example-header">
-              <h3>Pre-Push Checklist Workflow</h3>
-              <span class="difficulty easy">Easy</span>
-            </div>
-            <div class="example-content">
-              <div class="scenario">
-                <strong>Scenario:</strong> Before pushing to shared branches,
-                validate your work follows team standards.
-              </div>
-              <div class="solution">
-                <div class="step">
-                  <div class="step-title">
-                    Step 1: Check what you're about to push
-                  </div>
-                  <code>git log --oneline origin/main..HEAD</code>
-                  <div class="step-desc">See commits that will be pushed</div>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 2: Review your changes</div>
-                  <code>git diff origin/main..HEAD</code>
-                  <div class="step-desc">See all code differences</div>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 3: Check for forgotten debug code
-                  </div>
-                  <code>git grep "console.log\|debugger\|TODO"</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 4: Run tests locally</div>
-                  <code>npm test</code> or <code>python -m pytest</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">
-                    Step 5: Update your branch from main
-                  </div>
-                  <code>git fetch origin && git rebase origin/main</code>
-                </div>
-                <div class="step">
-                  <div class="step-title">Step 6: Now safe to push</div>
-                  <code>git push origin feature-branch</code>
-                </div>
-              </div>
-              <div class="note note-tip">
-                <strong>Pro tip:</strong> Create a git alias for these checks:
-                <code
-                  >git config --global alias.precheck '!git log --oneline
-                  origin/main..HEAD && git diff origin/main..HEAD | head'</code
-                >
               </div>
             </div>
           </div>

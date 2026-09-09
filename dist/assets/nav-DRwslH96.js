@@ -5,11 +5,11 @@
         <span>Dev Cheatsheets</span>
       </a>
       <ul class="nav-links">
-      <li>
-        <a href="${r}" class="git-link ${e===`git`?`active`:``}">Git</a>
-      </li>
         <li>
           <a href="${n?`bash.html`:`pages/bash.html`}" class="bash-link ${e===`bash`?`active`:``}">Bash</a>
+        </li>
+        <li>
+          <a href="${r}" class="git-link ${e===`git`?`active`:``}">Git</a>
         </li>
         <li>
           <a href="${n?`powershell.html`:`pages/powershell.html`}" class="powershell-link ${e===`powershell`?`active`:``}">PowerShell</a>
