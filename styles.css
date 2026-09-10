@@ -40,12 +40,11 @@ body {
 }
 
 .nav-container {
-  max-width: 1400px;
-  margin: 0 auto;
+  margin: 0 16px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 12px 12px;
+  padding: 20px 32px;
   gap: 24px;
 }
 
