@@ -1,11 +1,4 @@
-/**
- * Command renderer — converts command data into interactive HTML
- * Supports expand/collapse, copy buttons, metadata display, and warnings
- */
 
-/**
- * Render a single command card
- */
 export function renderCommandCard(command, uniqueId) {
   const riskBadge = getRiskBadge(command.risk);
   const adminBadge = command.adminRequired ? '<span class="badge badge-admin">Admin</span>' : '';

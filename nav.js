@@ -11,8 +11,8 @@ export function initNav(activePage) {
   nav.innerHTML = `
     <div class="nav-container">
       <a href="${gitHref}" class="nav-brand">
-        <span class="terminal-icon">▶</span>
-        <span>Dev Cheatsheets</span>
+        <img class="lime-icon" src="${inPagesDir ? "../" : ""}lemon-regular-full.svg" alt="" />
+        <span>CommandLime</span>
       </a>
       <ul class="nav-links">
       <li>
